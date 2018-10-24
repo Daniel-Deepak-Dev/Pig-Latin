@@ -17,3 +17,5 @@ Pig-Latin Encrypted:  myay eryvay ownyay entancesay ithway anyay improperyay ord
 -------------------------------------------------------------------------------------------
 
 ```
+
+*if you find any improvement to be made in this code feel free to help. I am a noob to coding*
