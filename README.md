@@ -1,5 +1,5 @@
 # Pig-Latin
-Using node.js converting a normal sentence to Pig-Latin
+Using node.js, converting a normal sentence into a Pig-Latin
 
 **command terminal input must be**
 ```
