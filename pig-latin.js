@@ -1,10 +1,10 @@
 
-sentance=`${process.argv[2]}`
-// sentance = 'Daniel is a good boy vwl'
+sentence=`${process.argv[2]}`
+// sentence = 'Daniel is a good boy vwl'
 
-splitedFile = sentance.split(' ')
+splitedFile = sentence.split(' ')
 
-const findTheFirstVowel =(word)=>{
+const findTheFirstVowel=(word)=>{
     
     FirstIOV = word.length 
     // above code is to consider next to last letter there is a vowel
@@ -40,7 +40,7 @@ arrayOfPigLatin = splitedFile
 });
 pigLatin = arrayOfPigLatin.join(' ')
 
-console.log(`\nsentance you entered: ${sentance}\n`);
+console.log(`\nsentence you entered: ${sentence}\n`);
 console.log(`-`.repeat(pigLatin.length+22))
 console.log(`Pig-Latin Encrypted: `,pigLatin)
 console.log(`${`-`.repeat(pigLatin.length+22)}\n`)
