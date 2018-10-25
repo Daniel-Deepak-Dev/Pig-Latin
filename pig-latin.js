@@ -1,4 +1,3 @@
-//testing git
 sentence=`${process.argv[2]}`
 // sentence = 'Daniel is a good boy vwl'
 if(process.argv[2]===undefined){
