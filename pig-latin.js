@@ -1,6 +1,13 @@
 //testing git
 sentence=`${process.argv[2]}`
 // sentence = 'Daniel is a good boy vwl'
+if(process.argv[2]===undefined){
+    console.log('\ndude, type a cute sentence and try again ;)')
+    console.log('-'.repeat(44))
+    console.log('\x1b[32m\x1b[40m%s\x1b[0m', 'node pig-latin.js "my cute little sentence"')
+    console.log(`${'-'.repeat(44)}\n`)   
+    return
+}
 
 splitedFile = sentence.split(' ')
 
@@ -40,7 +47,7 @@ arrayOfPigLatin = splitedFile
 });
 pigLatin = arrayOfPigLatin.join(' ')
 
-console.log(`\nsentence you entered: ${sentence}\n`);
-console.log(`-`.repeat(pigLatin.length+22))
-console.log(`Pig-Latin Encrypted: `,pigLatin)
-console.log(`${`-`.repeat(pigLatin.length+22)}\n`)
+console.log('\x1b[42m%s\x1b[0m',`\nsentence you entered: ${sentence}\n`);
+console.log('\x1b[32m%s\x1b[0m',`-`.repeat(pigLatin.length+22))
+console.log(`\x1b[43m\x1b[30m\Pig-Latin Encrypted\x1b[0m =>`,pigLatin)
+console.log('\x1b[32m%s\x1b[0m',`${`-`.repeat(pigLatin.length+22)}\n`)
