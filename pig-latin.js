@@ -17,10 +17,8 @@ const findTheFirstVowel=(word)=>{
 
     for (vowel of 'aeiouAEIOU'){
         indexOfVowel = word.indexOf(vowel)
-        if(indexOfVowel!=-1){
-            if(FirstIOV > indexOfVowel){
+        if(indexOfVowel!=-1 && FirstIOV > indexOfVowel){
                 FirstIOV=indexOfVowel
-            }
         }
     }
 
@@ -34,18 +32,16 @@ arrayOfPigLatin = splitedFile
     x=findTheFirstVowel(word)
     if(x==null){
         requiredWord = word+"ay"
-        return requiredWord
     }
     else if(x==0){
         requiredWord = word+"yay"
-        return requiredWord
     }
     else{
         firstHalfWord=word.slice(0,x)
         lastHalfWord=word.slice(x,10)
         requiredWord = lastHalfWord+firstHalfWord+'ay'
-        return requiredWord
     }
+        return requiredWord
 });
 pigLatin = arrayOfPigLatin.join(' ')
 
