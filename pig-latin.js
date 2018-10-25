@@ -15,7 +15,7 @@ const findTheFirstVowel=(word)=>{
     FirstIOV = word.length 
     // above code is to consider next to last letter there is a vowel
 
-    for (vowel of 'aeiou'){
+    for (vowel of 'aeiouAEIOU'){
         indexOfVowel = word.indexOf(vowel)
         if(indexOfVowel!=-1){
             if(FirstIOV > indexOfVowel){
@@ -33,15 +33,18 @@ arrayOfPigLatin = splitedFile
 .map(word => {
     x=findTheFirstVowel(word)
     if(x==null){
-        return requiredWord = word+"ay"
+        requiredWord = word+"ay"
+        return requiredWord
     }
     else if(x==0){
-        return requiredWord = word+"yay"
+        requiredWord = word+"yay"
+        return requiredWord
     }
     else{
         firstHalfWord=word.slice(0,x)
         lastHalfWord=word.slice(x,10)
-        return requiredWord = lastHalfWord+firstHalfWord+'ay'
+        requiredWord = lastHalfWord+firstHalfWord+'ay'
+        return requiredWord
     }
 });
 pigLatin = arrayOfPigLatin.join(' ')
