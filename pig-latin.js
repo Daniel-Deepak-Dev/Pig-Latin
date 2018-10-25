@@ -2,7 +2,7 @@
 sentence=`${process.argv[2]}`
 // sentence = 'Daniel is a good boy vwl'
 if(process.argv[2]===undefined){
-    console.log('\ndude, type a cute sentence and try again ;)')
+    console.log('\x1b[33m%s\x1b[0m','\ndude, type a cute sentence and try again ;)')
     console.log('-'.repeat(44))
     console.log('\x1b[32m\x1b[40m%s\x1b[0m', 'node pig-latin.js "my cute little sentence"')
     console.log(`${'-'.repeat(44)}\n`)   
@@ -47,7 +47,7 @@ arrayOfPigLatin = splitedFile
 });
 pigLatin = arrayOfPigLatin.join(' ')
 
-console.log('\x1b[42m%s\x1b[0m',`\nsentence you entered: ${sentence}\n`);
-console.log('\x1b[32m%s\x1b[0m',`-`.repeat(pigLatin.length+22))
+console.log('\x1b[42m\x1b[97m%s\x1b[0m',`\nsentence you entered`,`=>`, sentence);
+console.log('\x1b[32m%s\x1b[0m',`-`.repeat(pigLatin.length+23))
 console.log(`\x1b[43m\x1b[30m\Pig-Latin Encrypted\x1b[0m =>`,pigLatin)
-console.log('\x1b[32m%s\x1b[0m',`${`-`.repeat(pigLatin.length+22)}\n`)
+console.log('\x1b[32m%s\x1b[0m',`${`-`.repeat(pigLatin.length+23)}\n`)
